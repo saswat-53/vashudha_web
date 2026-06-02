@@ -1,0 +1,85 @@
+.roots__intro {
+  max-width: 640px;
+}
+
+.roots__leaf-icon {
+  margin-bottom: 16px;
+}
+
+.roots__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.roots__card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.roots__card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-500), var(--green-600));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.roots__card:hover {
+  border-color: var(--green-400);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.roots__card:hover::before {
+  transform: scaleX(1);
+}
+
+.roots__card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+.roots__card-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--green-800);
+  margin-bottom: 12px;
+}
+
+.roots__card-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--gray-500);
+}
+
+@media (max-width: 1024px) {
+  .roots__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .roots__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .roots__card {
+    padding: 24px 18px;
+  }
+}

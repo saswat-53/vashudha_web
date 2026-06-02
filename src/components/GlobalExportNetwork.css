@@ -1,0 +1,142 @@
+.export__layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: center;
+}
+
+.export__map-wrap {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  padding: 16px 16px 8px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.export__map-legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 8px 4px;
+  justify-content: center;
+}
+
+.export__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.export__legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(212, 160, 23, 0.75);
+  border: 1.5px solid #fff;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(212,160,23,0.4);
+}
+
+.export__legend-dot--origin {
+  background: #1B4332;
+  border: 1.5px solid #D4A017;
+}
+
+.export__dest-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--green-800);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--gold-500);
+  display: inline-block;
+}
+
+.export__dest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.export__region {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.export__region-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.export__region-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--gold-500);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.export__region-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green-800);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.export__region-places {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 18px;
+}
+
+.export__place {
+  font-size: 12px;
+  color: var(--gray-700);
+  background: var(--cream);
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--gray-200);
+}
+
+.export__stat {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--green-800), var(--green-700));
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  border-left: 4px solid var(--gold-500);
+}
+
+.export__stat-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--gold-400);
+  line-height: 1;
+}
+
+.export__stat-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .export__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .export__destinations {
+    order: -1;
+  }
+}

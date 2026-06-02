@@ -1,0 +1,137 @@
+.journey__track {
+  position: relative;
+  padding-top: 24px;
+}
+
+.journey__line {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-500), var(--green-600), var(--gold-500));
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.journey__steps {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.journey__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.journey__step-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.journey__step-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(212, 160, 23, 0.15);
+  border: 2px solid var(--gold-500);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+  color: var(--white);
+}
+
+.journey__step:hover .journey__step-icon {
+  background: var(--gold-500);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(212, 160, 23, 0.4);
+}
+
+.journey__step-connector {
+  width: 2px;
+  height: 20px;
+  background: var(--gold-500);
+  opacity: 0.4;
+  margin-top: 2px;
+}
+
+.journey__step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.journey__step-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold-400);
+  letter-spacing: 0.08em;
+}
+
+.journey__step-label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.journey__step-desc {
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.50);
+  line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  .journey__steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    row-gap: 36px;
+  }
+
+  .journey__line {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .journey__steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    row-gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey__steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    row-gap: 24px;
+  }
+
+  .journey__step-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .journey__step-label {
+    font-size: 12px;
+  }
+
+  .journey__step-desc {
+    font-size: 10.5px;
+  }
+}

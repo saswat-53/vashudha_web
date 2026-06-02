@@ -1,0 +1,126 @@
+.sustainability {
+  position: relative;
+  padding: 96px 0;
+  overflow: hidden;
+}
+
+.sustainability__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.sustainability__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.sustainability__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 40, 24, 0.92) 0%,
+    rgba(27, 67, 50, 0.85) 50%,
+    rgba(45, 106, 79, 0.75) 100%
+  );
+}
+
+.sustainability__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.sustainability__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  margin-bottom: 16px;
+  padding: 4px 12px;
+  border: 1px solid rgba(212, 160, 23, 0.4);
+  border-radius: 20px;
+}
+
+.sustainability__title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 5vw, 48px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 32px;
+  word-break: break-word;
+}
+
+.sustainability__title em {
+  font-style: italic;
+  color: var(--gold-400);
+}
+
+.sustainability__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sustain-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px 28px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-bottom: none;
+  transition: background 0.2s;
+}
+
+.sustain-card:first-child {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.sustain-card:last-child {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.sustain-card:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.sustain-card__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sustain-card__title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.sustain-card__desc {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .sustainability__content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sustainability {
+    padding: 64px 0;
+  }
+}
