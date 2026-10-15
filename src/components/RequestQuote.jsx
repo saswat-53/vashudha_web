@@ -12,17 +12,20 @@ const countries = [
 ];
 
 const products = [
-  'Moringa Powder', 'Turmeric Powder', 'Herbal Ingredients', 'Spices',
-  'Dehydrated Products', 'Agricultural Products', 'Private Label Products',
+  'Raw Agricultural Commodities', 'Spices', 'Turmeric', 'Dehydrated Products',
+  'Moringa Powder', 'Herbal Ingredients', 'Private Label Products',
   'Custom B2B Manufacturing', 'Custom Packaging', 'Other',
 ];
 
+const emptyForm = {
+  fullName: '', firm: '', designation: '', email: '', whatsapp: '',
+  country: '', product: '', quantity: '', specifications: '',
+  destination: '', message: '',
+};
+
 export default function RequestQuote() {
   const { ref, isVisible } = useScrollReveal();
-  const [form, setForm] = useState({
-    fullName: '', company: '', country: '', product: '',
-    quantity: '', whatsapp: '', message: '',
-  });
+  const [form, setForm] = useState(emptyForm);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
@@ -30,10 +33,14 @@ export default function RequestQuote() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const required = ['fullName', 'company', 'country', 'product', 'quantity'];
+    const required = ['fullName', 'firm', 'email', 'country', 'product', 'quantity', 'destination'];
     const missing = required.find((f) => !form[f].trim());
     if (missing) {
       setError('Please fill in all required fields.');
+      return;
+    }
+    if (!/^\S+@\S+\.\S+$/.test(form.email)) {
+      setError('Please enter a valid email address.');
       return;
     }
     setError('');
@@ -41,22 +48,22 @@ export default function RequestQuote() {
   };
 
   return (
-    <section id="quote" className="section-wrap dark" ref={ref}>
+    <section id="enquiry" className="section-wrap dark" ref={ref}>
       <div className="container">
         <div className={`quote__layout reveal ${isVisible ? 'visible' : ''}`}>
           <div className="quote__left">
             <SectionHeader
               number="10"
-              title="Request a Quote"
-              subtitle="Let's Grow Together"
+              title="B2B Enquiry"
+              subtitle="Tell us what you need to source"
               light
             />
             <div className="quote__features">
-              {['Fast Response Within 24hrs', 'Competitive B2B Pricing', 'Custom Packaging Available', 'Export Documentation Support'].map((f, i) => (
+              {['Response Within 24 Hours', 'Competitive B2B Pricing', 'Custom Specifications & Packaging', 'Export Documentation Support'].map((f, i) => (
                 <div key={i} className="quote__feature">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <circle cx="8" cy="8" r="7" fill="#D4A017" opacity="0.2" stroke="#D4A017" strokeWidth="1"/>
-                    <path d="M5 8L7 10L11 6" stroke="#D4A017" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="8" cy="8" r="7" fill="#C9A227" opacity="0.2" stroke="#C9A227" strokeWidth="1"/>
+                    <path d="M5 8L7 10L11 6" stroke="#C9A227" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span>{f}</span>
                 </div>
@@ -69,14 +76,14 @@ export default function RequestQuote() {
               <div className="quote__success">
                 <div className="quote__success-icon">
                   <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <circle cx="24" cy="24" r="22" fill="#D4A017" opacity="0.15" stroke="#D4A017" strokeWidth="1.5"/>
-                    <path d="M14 24L20 30L34 18" stroke="#D4A017" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="24" cy="24" r="22" fill="#C9A227" opacity="0.15" stroke="#C9A227" strokeWidth="1.5"/>
+                    <path d="M14 24L20 30L34 18" stroke="#C9A227" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3 className="quote__success-title">Inquiry Received!</h3>
-                <p className="quote__success-text">Thank you, {form.fullName}. Our team will contact you within 24 hours at your provided WhatsApp number or email.</p>
-                <button className="btn btn--gold" onClick={() => { setSubmitted(false); setForm({ fullName: '', company: '', country: '', product: '', quantity: '', whatsapp: '', message: '' }); }}>
-                  Submit Another Inquiry
+                <h3 className="quote__success-title">Enquiry Received!</h3>
+                <p className="quote__success-text">Thank you, {form.fullName}. Our team will contact you within 24 hours at your provided email or WhatsApp number.</p>
+                <button className="btn btn--gold" onClick={() => { setSubmitted(false); setForm(emptyForm); }}>
+                  Submit Another Enquiry
                 </button>
               </div>
             ) : (
@@ -87,8 +94,19 @@ export default function RequestQuote() {
                     <input type="text" className="form__input" placeholder="Your full name" value={form.fullName} onChange={update('fullName')} />
                   </div>
                   <div className="form__field">
-                    <label className="form__label">Company Name <span className="form__req">*</span></label>
-                    <input type="text" className="form__input" placeholder="Your company" value={form.company} onChange={update('company')} />
+                    <label className="form__label">Firm Name <span className="form__req">*</span></label>
+                    <input type="text" className="form__input" placeholder="Your firm" value={form.firm} onChange={update('firm')} />
+                  </div>
+                </div>
+
+                <div className="form__row">
+                  <div className="form__field">
+                    <label className="form__label">Designation</label>
+                    <input type="text" className="form__input" placeholder="e.g. Procurement Manager" value={form.designation} onChange={update('designation')} />
+                  </div>
+                  <div className="form__field">
+                    <label className="form__label">Business Email <span className="form__req">*</span></label>
+                    <input type="email" className="form__input" placeholder="you@firm.com" value={form.email} onChange={update('email')} />
                   </div>
                 </div>
 
@@ -120,15 +138,26 @@ export default function RequestQuote() {
                   </div>
                 </div>
 
+                <div className="form__row">
+                  <div className="form__field">
+                    <label className="form__label">Destination Country / Port <span className="form__req">*</span></label>
+                    <input type="text" className="form__input" placeholder="e.g. Rotterdam, Netherlands" value={form.destination} onChange={update('destination')} />
+                  </div>
+                  <div className="form__field">
+                    <label className="form__label">Specifications</label>
+                    <input type="text" className="form__input" placeholder="Grade, purity, mesh size, packaging" value={form.specifications} onChange={update('specifications')} />
+                  </div>
+                </div>
+
                 <div className="form__field">
-                  <label className="form__label">Message (Optional)</label>
+                  <label className="form__label">Additional Requirements (Optional)</label>
                   <textarea className="form__input form__textarea" rows={4} placeholder="Tell us more about your requirements..." value={form.message} onChange={update('message')} />
                 </div>
 
                 {error && <div className="form__error">{error}</div>}
 
                 <button type="submit" className="btn btn--gold form__submit">
-                  Submit Inquiry
+                  Submit Enquiry
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M2 8H14M14 8L10 4M14 8L10 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>

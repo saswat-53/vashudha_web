@@ -33,9 +33,9 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(13, 40, 24, 0.88) 0%,
-    rgba(27, 67, 50, 0.80) 40%,
-    rgba(45, 106, 79, 0.60) 100%
+    rgba(16, 40, 15, 0.88) 0%,
+    rgba(30, 77, 26, 0.80) 40%,
+    rgba(46, 107, 36, 0.60) 100%
   );
 }
 
@@ -135,7 +135,7 @@
   background: var(--gold-400);
   border-color: var(--gold-400);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 160, 23, 0.4);
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
 }
 
 .btn--outline {
@@ -170,9 +170,9 @@
   left: 0;
   right: 0;
   z-index: 1;
-  background: rgba(13, 40, 24, 0.85);
+  background: rgba(16, 40, 15, 0.85);
   backdrop-filter: blur(8px);
-  border-top: 1px solid rgba(212, 160, 23, 0.3);
+  border-top: 1px solid rgba(201, 162, 39, 0.3);
 }
 
 .hero__stats-grid {

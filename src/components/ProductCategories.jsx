@@ -5,27 +5,19 @@ import './ProductCategories.css';
 const products = [
   {
     number: '01',
-    title: 'Herbal Products',
-    image: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=700&q=80&auto=format&fit=crop',
-    items: ['Moringa Powder', 'Turmeric', 'Herbal Ingredients'],
-    badge: 'Most Popular',
-    badgeClass: 'badge--gold',
-  },
-  {
-    number: '02',
-    title: 'Agricultural Products',
+    title: 'Raw Agricultural Commodities',
     image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=700&q=80&auto=format&fit=crop',
-    items: ['Spices', 'Turmeric', 'Dehydrated Products', 'Wild Agricultural Products'],
-    badge: 'Wide Range',
+    items: ['Whole & Ground Spices', 'Turmeric Fingers', 'Dehydrated Produce', 'Wild Agricultural Products'],
+    badge: 'Prithvi Agro Ventures',
     badgeClass: 'badge--green',
   },
   {
-    number: '03',
-    title: 'Value Added Products',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=700&q=80&auto=format&fit=crop',
-    items: ['Private Label', 'B2B Manufacturing', 'Custom Packaging'],
-    badge: 'B2B',
-    badgeClass: 'badge--dark',
+    number: '02',
+    title: 'Processed Ingredients',
+    image: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=700&q=80&auto=format&fit=crop',
+    items: ['Moringa Powder', 'Turmeric Powder', 'Herbal Ingredients', 'Private Label & Custom Packaging'],
+    badge: 'Swarnabhumi · B2B',
+    badgeClass: 'badge--gold',
   },
 ];
 
@@ -39,7 +31,7 @@ export default function ProductCategories() {
           <SectionHeader
             number="03"
             title="Product Categories"
-            subtitle="What We Offer"
+            subtitle="Processed & value-added products under our B2B brand, Swarnabhumi"
           />
         </div>
 
@@ -62,9 +54,9 @@ export default function ProductCategories() {
                     </li>
                   ))}
                 </ul>
-                <a href="#quote" className="product-card__link"
-                   onClick={(e) => { e.preventDefault(); document.querySelector('#quote')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                  View Products
+                <a href="#enquiry" className="product-card__link"
+                   onClick={(e) => { e.preventDefault(); document.querySelector('#enquiry')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                  Enquire Now
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>

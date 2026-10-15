@@ -8,10 +8,10 @@ const features = [
     desc: 'State-of-the-art machinery for consistent, high-volume production with minimal human error.',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <rect x="4" y="12" width="6" height="16" rx="1" fill="#D4A017" opacity="0.8"/>
-        <rect x="13" y="8" width="6" height="20" rx="1" fill="#D4A017" opacity="0.9"/>
-        <rect x="22" y="4" width="6" height="24" rx="1" fill="#D4A017"/>
-        <path d="M2 28H30" stroke="#2D6A4F" strokeWidth="1.5" strokeLinecap="round"/>
+        <rect x="4" y="12" width="6" height="16" rx="1" fill="#C9A227" opacity="0.8"/>
+        <rect x="13" y="8" width="6" height="20" rx="1" fill="#C9A227" opacity="0.9"/>
+        <rect x="22" y="4" width="6" height="24" rx="1" fill="#C9A227"/>
+        <path d="M2 28H30" stroke="#2E6B24" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -20,8 +20,8 @@ const features = [
     desc: 'GMP-compliant clean rooms and food-safe environments throughout the production process.',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <path d="M16 4L6 9V16C6 21.523 10.477 26 16 26C21.523 26 26 21.523 26 16V9L16 4Z" fill="#D4A017" opacity="0.2" stroke="#D4A017" strokeWidth="1.5"/>
-        <path d="M11 16L14 19L21 13" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M16 4L6 9V16C6 21.523 10.477 26 16 26C21.523 26 26 21.523 26 16V9L16 4Z" fill="#C9A227" opacity="0.2" stroke="#C9A227" strokeWidth="1.5"/>
+        <path d="M11 16L14 19L21 13" stroke="#2E6B24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
   },
@@ -30,8 +30,8 @@ const features = [
     desc: 'Multi-stage inspection from raw material receipt to finished product dispatch.',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <circle cx="16" cy="16" r="12" stroke="#D4A017" strokeWidth="1.5" opacity="0.8"/>
-        <path d="M10 16L14 20L22 12" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <circle cx="16" cy="16" r="12" stroke="#C9A227" strokeWidth="1.5" opacity="0.8"/>
+        <path d="M10 16L14 20L22 12" stroke="#2E6B24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
   },
@@ -40,9 +40,9 @@ const features = [
     desc: 'Custom packaging solutions designed to preserve product integrity during global transit.',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <rect x="6" y="14" width="20" height="14" rx="2" fill="#D4A017" opacity="0.2" stroke="#D4A017" strokeWidth="1.5"/>
-        <path d="M6 14L16 4L26 14" stroke="#D4A017" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M13 28V20H19V28" stroke="#2D6A4F" strokeWidth="1.5" strokeLinecap="round"/>
+        <rect x="6" y="14" width="20" height="14" rx="2" fill="#C9A227" opacity="0.2" stroke="#C9A227" strokeWidth="1.5"/>
+        <path d="M6 14L16 4L26 14" stroke="#C9A227" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M13 28V20H19V28" stroke="#2E6B24" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -51,10 +51,10 @@ const features = [
     desc: 'End-to-end supply chain transparency — from farm origin to final destination.',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <circle cx="8" cy="8" r="4" fill="#D4A017" opacity="0.7"/>
-        <circle cx="24" cy="8" r="4" fill="#D4A017" opacity="0.7"/>
-        <circle cx="16" cy="24" r="4" fill="#D4A017"/>
-        <path d="M8 12L16 20M24 12L16 20" stroke="#2D6A4F" strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx="8" cy="8" r="4" fill="#C9A227" opacity="0.7"/>
+        <circle cx="24" cy="8" r="4" fill="#C9A227" opacity="0.7"/>
+        <circle cx="16" cy="24" r="4" fill="#C9A227"/>
+        <path d="M8 12L16 20M24 12L16 20" stroke="#2E6B24" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -63,9 +63,9 @@ const features = [
     desc: 'Reliable supply chain management ensuring on-time delivery without compromising quality.',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <path d="M4 16C4 16 8 8 16 8C24 8 28 16 28 16" stroke="#D4A017" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M4 20C4 20 8 24 16 24C24 24 28 20 28 20" stroke="#2D6A4F" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="16" cy="16" r="3" fill="#D4A017"/>
+        <path d="M4 16C4 16 8 8 16 8C24 8 28 16 28 16" stroke="#C9A227" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M4 20C4 20 8 24 16 24C24 24 28 20 28 20" stroke="#2E6B24" strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx="16" cy="16" r="3" fill="#C9A227"/>
       </svg>
     ),
   },

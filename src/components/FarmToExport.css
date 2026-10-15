@@ -40,7 +40,7 @@
 .journey__step-icon {
   width: 52px;
   height: 52px;
-  background: rgba(212, 160, 23, 0.15);
+  background: rgba(201, 162, 39, 0.15);
   border: 2px solid var(--gold-500);
   border-radius: 50%;
   display: flex;
@@ -56,7 +56,7 @@
 .journey__step:hover .journey__step-icon {
   background: var(--gold-500);
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(212, 160, 23, 0.4);
+  box-shadow: 0 0 20px rgba(201, 162, 39, 0.4);
 }
 
 .journey__step-connector {

@@ -33,7 +33,7 @@ export default function Hero() {
         <div className={`hero__text ${loaded ? 'hero__text--loaded' : ''}`}>
           <div className="hero__eyebrow">
             <span className="hero__eyebrow-line" />
-            <span>From Earth to Global Markets</span>
+            <span>From Indian Soil to the World</span>
           </div>
           <h1 className="hero__title">
             Premium Agricultural &amp;<br className="hero__br" />
@@ -49,8 +49,8 @@ export default function Hero() {
                onClick={(e) => { e.preventDefault(); document.querySelector('#products')?.scrollIntoView({ behavior: 'smooth' }); }}>
               Explore Products
             </a>
-            <a href="#quote" className="btn btn--outline"
-               onClick={(e) => { e.preventDefault(); document.querySelector('#quote')?.scrollIntoView({ behavior: 'smooth' }); }}>
+            <a href="#enquiry" className="btn btn--outline"
+               onClick={(e) => { e.preventDefault(); document.querySelector('#enquiry')?.scrollIntoView({ behavior: 'smooth' }); }}>
               Request a Quote
             </a>
           </div>

@@ -114,9 +114,9 @@
   letter-spacing: 0.06em;
   padding: 4px 10px;
   border-radius: 4px;
-  background: rgba(212, 160, 23, 0.15);
+  background: rgba(201, 162, 39, 0.15);
   color: var(--gold-400);
-  border: 1px solid rgba(212, 160, 23, 0.3);
+  border: 1px solid rgba(201, 162, 39, 0.3);
 }
 
 .footer__contact-mini {
@@ -188,4 +188,20 @@
     flex-wrap: wrap;
     gap: 8px;
   }
+}
+
+.footer__logo-img {
+  height: 52px;
+  width: auto;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+}
+
+.footer__pillars {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  margin-bottom: 20px;
 }

@@ -1,3 +1,4 @@
+import emblem from '../assets/logo-emblem.png';
 import './Footer.css';
 
 const navLinks = [
@@ -23,20 +24,17 @@ export default function Footer() {
           <div className="footer__layout">
             <div className="footer__brand">
               <a href="#home" className="footer__logo" onClick={(e) => { e.preventDefault(); scrollTo('#home'); }}>
-                <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-                  <path d="M16 2C16 2 6 8 6 18C6 23.523 10.477 28 16 28C21.523 28 26 23.523 26 18C26 8 16 2 16 2Z" fill="#D4A017" opacity="0.9"/>
-                  <path d="M16 2C16 2 8 10 10 20C11.5 27 16 28 16 28" stroke="#0D2818" strokeWidth="1.5" fill="none"/>
-                  <path d="M16 14C16 14 20 17 21 21" stroke="#0D2818" strokeWidth="1.2" strokeLinecap="round"/>
-                </svg>
+                <img src={emblem} alt="Prithvi Agro Ventures logo" className="footer__logo-img" />
                 <div>
-                  <span className="footer__logo-primary">VASUDHA AGRO</span>
-                  <span className="footer__logo-sub">PVT. LTD.</span>
+                  <span className="footer__logo-primary">PRITHVI</span>
+                  <span className="footer__logo-sub">AGRO VENTURES</span>
                 </div>
               </a>
               <p className="footer__tagline">
-                From Earth to Global Markets.<br />
+                From Indian Soil to the World.<br />
                 Connecting India's finest agricultural and herbal products with the world.
               </p>
+              <p className="footer__pillars">Cultivation · Processing · Export · Global Reach</p>
               <div className="footer__social">
                 <a href="#" className="footer__social-btn footer__social-btn--fb" aria-label="Facebook">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -92,7 +90,7 @@ export default function Footer() {
               </div>
               <h4 className="footer__heading footer__heading--mt">Contact</h4>
               <div className="footer__contact-mini">
-                <a href="mailto:info@vasudhaagro.com" className="footer__link">info@vasudhaagro.com</a>
+                <a href="mailto:info@prithviagroventures.com" className="footer__link">info@prithviagroventures.com</a>
                 <a href="tel:+919876543210" className="footer__link">+91 98765 43210</a>
               </div>
             </div>
@@ -103,7 +101,7 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="container">
           <div className="footer__bottom-inner">
-            <p className="footer__copy">© 2024 Vasudha Agro Pvt. Ltd. All Rights Reserved.</p>
+            <p className="footer__copy">© 2024 Prithvi Agro Ventures. Swarnabhumi is a brand of Prithvi Agro Ventures. All Rights Reserved.</p>
             <div className="footer__bottom-links">
               <a href="#" className="footer__bottom-link">Privacy Policy</a>
               <span>·</span>

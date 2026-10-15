@@ -21,9 +21,9 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(13, 40, 24, 0.92) 0%,
-    rgba(27, 67, 50, 0.85) 50%,
-    rgba(45, 106, 79, 0.75) 100%
+    rgba(16, 40, 15, 0.92) 0%,
+    rgba(30, 77, 26, 0.85) 50%,
+    rgba(46, 107, 36, 0.75) 100%
   );
 }
 
@@ -45,7 +45,7 @@
   color: var(--gold-400);
   margin-bottom: 16px;
   padding: 4px 12px;
-  border: 1px solid rgba(212, 160, 23, 0.4);
+  border: 1px solid rgba(201, 162, 39, 0.4);
   border-radius: 20px;
 }
 

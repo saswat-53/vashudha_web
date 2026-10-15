@@ -35,15 +35,15 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(212, 160, 23, 0.75);
+  background: rgba(201, 162, 39, 0.75);
   border: 1.5px solid #fff;
   flex-shrink: 0;
-  box-shadow: 0 0 0 1px rgba(212,160,23,0.4);
+  box-shadow: 0 0 0 1px rgba(201,162,39,0.4);
 }
 
 .export__legend-dot--origin {
-  background: #1B4332;
-  border: 1.5px solid #D4A017;
+  background: #1E4D1A;
+  border: 1.5px solid #C9A227;
 }
 
 .export__dest-title {

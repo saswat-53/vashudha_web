@@ -1,5 +1,5 @@
 {
-  "name": "vasudha-agro",
+  "name": "prithvi-agro-ventures",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -15,7 +15,7 @@
     "react-simple-maps": "^3.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.4.1"
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.4"
   }
 }

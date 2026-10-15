@@ -3,11 +3,11 @@ import SectionHeader from './SectionHeader';
 import './QualityCertifications.css';
 
 const certs = [
-  { code: 'FSSAI', name: 'Food Safety and Standards Authority of India', color: '#1B4332', accent: '#D4A017', desc: 'Food safety certification ensuring compliance with Indian food standards.' },
-  { code: 'IEC', name: 'Import Export Code', color: '#2D6A4F', accent: '#E5B62E', desc: 'Official import-export certification for international trade operations.' },
-  { code: 'UDYAM', name: 'MSME Registration', color: '#40916C', accent: '#D4A017', desc: 'Registered MSME enterprise under the Government of India initiative.' },
-  { code: 'HACCP', name: 'Hazard Analysis Critical Control Points', color: '#0D2818', accent: '#E5B62E', desc: 'International food safety management system certification.' },
-  { code: 'GMP', name: 'Good Manufacturing Practices', color: '#1B4332', accent: '#D4A017', desc: 'Ensures products are consistently produced and controlled to quality standards.' },
+  { code: 'FSSAI', name: 'Food Safety and Standards Authority of India', color: '#1E4D1A', accent: '#C9A227', desc: 'Food safety certification ensuring compliance with Indian food standards.' },
+  { code: 'IEC', name: 'Import Export Code', color: '#2E6B24', accent: '#D9B746', desc: 'Official import-export certification for international trade operations.' },
+  { code: 'UDYAM', name: 'MSME Registration', color: '#4A8A35', accent: '#C9A227', desc: 'Registered MSME enterprise under the Government of India initiative.' },
+  { code: 'HACCP', name: 'Hazard Analysis Critical Control Points', color: '#10280F', accent: '#D9B746', desc: 'International food safety management system certification.' },
+  { code: 'GMP', name: 'Good Manufacturing Practices', color: '#1E4D1A', accent: '#C9A227', desc: 'Ensures products are consistently produced and controlled to quality standards.' },
 ];
 
 export default function QualityCertifications() {
@@ -48,7 +48,7 @@ export default function QualityCertifications() {
         <div className={`certs__trust reveal delay-4 ${isVisible ? 'visible' : ''}`}>
           <div className="certs__trust-inner">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2L12.5 7.5H18L13.5 11L15.5 17L10 13.5L4.5 17L6.5 11L2 7.5H7.5L10 2Z" fill="#D4A017" opacity="0.8"/>
+              <path d="M10 2L12.5 7.5H18L13.5 11L15.5 17L10 13.5L4.5 17L6.5 11L2 7.5H7.5L10 2Z" fill="#C9A227" opacity="0.8"/>
             </svg>
             <p>All certifications are regularly audited and renewed to maintain the highest standards of quality assurance in agricultural and herbal product manufacturing.</p>
           </div>

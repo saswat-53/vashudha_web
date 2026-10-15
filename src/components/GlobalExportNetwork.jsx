@@ -89,9 +89,9 @@ export default function GlobalExportNetwork() {
                           key={geo.rsmKey}
                           geography={geo}
                           style={{
-                            default: { fill: '#D4A017', stroke: '#B8860B', strokeWidth: 1, outline: 'none' },
-                            hover:   { fill: '#E5B62E', stroke: '#B8860B', strokeWidth: 1, outline: 'none' },
-                            pressed: { fill: '#D4A017', outline: 'none' },
+                            default: { fill: '#C9A227', stroke: '#A98410', strokeWidth: 1, outline: 'none' },
+                            hover:   { fill: '#D9B746', stroke: '#A98410', strokeWidth: 1, outline: 'none' },
+                            pressed: { fill: '#C9A227', outline: 'none' },
                           }}
                         />
                       ))
@@ -104,7 +104,7 @@ export default function GlobalExportNetwork() {
                     key={d.name}
                     from={INDIA}
                     to={d.coords}
-                    stroke={hovered === d.name ? '#D4A017' : 'rgba(212,160,23,0.35)'}
+                    stroke={hovered === d.name ? '#C9A227' : 'rgba(201,162,39,0.35)'}
                     strokeWidth={hovered === d.name ? 1.5 : 0.8}
                     strokeDasharray="4 3"
                     strokeLinecap="round"
@@ -121,7 +121,7 @@ export default function GlobalExportNetwork() {
                   >
                     <circle
                       r={hovered === d.name ? 6 : 4}
-                      fill={hovered === d.name ? '#D4A017' : 'rgba(212,160,23,0.75)'}
+                      fill={hovered === d.name ? '#C9A227' : 'rgba(201,162,39,0.75)'}
                       stroke="#fff"
                       strokeWidth={1.2}
                       style={{ transition: 'r 0.2s, fill 0.2s', cursor: 'pointer' }}
@@ -134,7 +134,7 @@ export default function GlobalExportNetwork() {
                           fontFamily: 'Inter, sans-serif',
                           fontSize: '9px',
                           fontWeight: '600',
-                          fill: '#1B4332',
+                          fill: '#1E4D1A',
                           pointerEvents: 'none',
                         }}
                       >
@@ -146,8 +146,8 @@ export default function GlobalExportNetwork() {
 
                 {/* India origin marker */}
                 <Marker coordinates={INDIA}>
-                  <circle r={7} fill="#1B4332" stroke="#D4A017" strokeWidth={2} />
-                  <circle r={3} fill="#D4A017" />
+                  <circle r={7} fill="#1E4D1A" stroke="#C9A227" strokeWidth={2} />
+                  <circle r={3} fill="#C9A227" />
                   <text
                     y={16}
                     textAnchor="middle"
@@ -155,7 +155,7 @@ export default function GlobalExportNetwork() {
                       fontFamily: 'Inter, sans-serif',
                       fontSize: '8px',
                       fontWeight: '700',
-                      fill: '#1B4332',
+                      fill: '#1E4D1A',
                     }}
                   >
                     INDIA
